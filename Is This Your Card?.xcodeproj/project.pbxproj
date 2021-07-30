@@ -11,6 +11,10 @@
 		DA19C9E526B0E64000DF67E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9E426B0E64000DF67E4 /* ContentView.swift */; };
 		DA19C9E726B0E64000DF67E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA19C9E626B0E64000DF67E4 /* Assets.xcassets */; };
 		DA19C9EA26B0E64000DF67E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA19C9E926B0E64000DF67E4 /* Preview Assets.xcassets */; };
+		DA19C9F226B0E70400DF67E4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9F126B0E70400DF67E4 /* Card.swift */; };
+		DA19C9F426B0E78600DF67E4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9F326B0E78600DF67E4 /* CardView.swift */; };
+		DA19C9F826B17BE700DF67E4 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9F726B17BE700DF67E4 /* Deck.swift */; };
+		DAC2F64A26B3624200F0D485 /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2F64926B3624200F0D485 /* PresentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		DA19C9E626B0E64000DF67E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA19C9E926B0E64000DF67E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA19C9EB26B0E64000DF67E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA19C9F126B0E70400DF67E4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DA19C9F326B0E78600DF67E4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		DA19C9F726B17BE700DF67E4 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		DAC2F64926B3624200F0D485 /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,10 @@
 				DA19C9E626B0E64000DF67E4 /* Assets.xcassets */,
 				DA19C9EB26B0E64000DF67E4 /* Info.plist */,
 				DA19C9E826B0E64000DF67E4 /* Preview Content */,
+				DA19C9F126B0E70400DF67E4 /* Card.swift */,
+				DA19C9F326B0E78600DF67E4 /* CardView.swift */,
+				DA19C9F726B17BE700DF67E4 /* Deck.swift */,
+				DAC2F64926B3624200F0D485 /* PresentView.swift */,
 			);
 			path = "Is This Your Card?";
 			sourceTree = "<group>";
@@ -138,7 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA19C9F826B17BE700DF67E4 /* Deck.swift in Sources */,
 				DA19C9E526B0E64000DF67E4 /* ContentView.swift in Sources */,
+				DA19C9F226B0E70400DF67E4 /* Card.swift in Sources */,
+				DA19C9F426B0E78600DF67E4 /* CardView.swift in Sources */,
+				DAC2F64A26B3624200F0D485 /* PresentView.swift in Sources */,
 				DA19C9E326B0E64000DF67E4 /* Is_This_Your_Card_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

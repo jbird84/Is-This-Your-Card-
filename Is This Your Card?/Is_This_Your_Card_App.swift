@@ -11,7 +11,7 @@ import SwiftUI
 struct Is_This_Your_Card_App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(newDeck: [Card(card: "")])
+            ContentView(theCard: Card(card: "11heart"), newDeck: [Card(card: "")])
         }
     }
 }

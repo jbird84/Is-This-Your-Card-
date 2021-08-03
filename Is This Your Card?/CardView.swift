@@ -13,7 +13,6 @@ struct CardView: View {
   
     var body: some View {
   
-        VStack {
                    VStack {
                     Spacer()
                     Image(card.card)
@@ -21,7 +20,7 @@ struct CardView: View {
                         .frame(width: 180, height: 280, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                        Spacer()
                    }
-               }
+               
                .padding()
                .frame(width: 200, height: 300)
                .background(

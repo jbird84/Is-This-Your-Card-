@@ -10,8 +10,10 @@ import SwiftUI
 struct ContentView: View {
     
     @State var deck: Deck = Deck()
- //   @State var theCard: Card
+    @State var theCard: Card
     @State var newDeck: [Card]
+    @State var isTapped = false
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -58,12 +60,12 @@ struct ContentView: View {
                         .rotationEffect(self.rotation(for: card))
                         .onTapGesture {
                             //removes top card/selected card and adds to new deck.
-                            let selectedCard = deck.cards.removeFirst()
+                            theCard = deck.cards.removeFirst()
                             //shuffle the deck of cards
                             deck.cards.shuffle()
                             
                             //adds the selected card to a new deck
-                            newDeck.append(selectedCard)
+                            newDeck.append(theCard)
                             
                             //Removes the first item in new deck array which is an empty string
                             newDeck.removeFirst()
@@ -80,17 +82,19 @@ struct ContentView: View {
                             newDeck.append(deck.cards[31])
                             newDeck.append(deck.cards[16])
                             newDeck.append(deck.cards[15])
+                            newDeck.append(deck.cards[12])
+                            newDeck.append(deck.cards[24])
+                            newDeck.append(deck.cards[8])
+                            newDeck.append(deck.cards[41])
                             
                             //shuffle the new deck so selected card is not the first item.
                             newDeck.shuffle()
+                            isTapped = true
                         }
                 }
+                NavigationLink("NavLink", destination: PresentView(contentView: ContentView(theCard: theCard, newDeck: newDeck)), isActive: $isTapped)
             }
-            NavigationLink(
-                destination: PresentView(contentView: ContentView(newDeck: newDeck)),
-                label: {
-                    Text("Navigate")
-                })
+            
         }
     }
     

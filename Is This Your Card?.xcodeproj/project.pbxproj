@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA03C34126B8D89900D3BF4A /* CardImageMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03C34026B8D89900D3BF4A /* CardImageMod.swift */; };
+		DA03C34326B8DA0200D3BF4A /* HStackViewMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03C34226B8DA0200D3BF4A /* HStackViewMod.swift */; };
 		DA19C9E326B0E64000DF67E4 /* Is_This_Your_Card_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9E226B0E64000DF67E4 /* Is_This_Your_Card_App.swift */; };
 		DA19C9E526B0E64000DF67E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9E426B0E64000DF67E4 /* ContentView.swift */; };
 		DA19C9E726B0E64000DF67E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA19C9E626B0E64000DF67E4 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA03C34026B8D89900D3BF4A /* CardImageMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageMod.swift; sourceTree = "<group>"; };
+		DA03C34226B8DA0200D3BF4A /* HStackViewMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStackViewMod.swift; sourceTree = "<group>"; };
 		DA19C9DF26B0E64000DF67E4 /* Is This Your Card?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Is This Your Card?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA19C9E226B0E64000DF67E4 /* Is_This_Your_Card_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Is_This_Your_Card_App.swift; sourceTree = "<group>"; };
 		DA19C9E426B0E64000DF67E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA03C33F26B8D87100D3BF4A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DA03C34026B8D89900D3BF4A /* CardImageMod.swift */,
+				DA03C34226B8DA0200D3BF4A /* HStackViewMod.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		DA19C9D626B0E64000DF67E4 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +73,7 @@
 		DA19C9E126B0E64000DF67E4 /* Is This Your Card? */ = {
 			isa = PBXGroup;
 			children = (
+				DA03C33F26B8D87100D3BF4A /* Helpers */,
 				DA19C9E226B0E64000DF67E4 /* Is_This_Your_Card_App.swift */,
 				DA19C9E426B0E64000DF67E4 /* ContentView.swift */,
 				DA19C9E626B0E64000DF67E4 /* Assets.xcassets */,
@@ -151,11 +165,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA19C9F826B17BE700DF67E4 /* Deck.swift in Sources */,
+				DA03C34126B8D89900D3BF4A /* CardImageMod.swift in Sources */,
 				DA19C9E526B0E64000DF67E4 /* ContentView.swift in Sources */,
 				DA19C9F226B0E70400DF67E4 /* Card.swift in Sources */,
 				DA19C9F426B0E78600DF67E4 /* CardView.swift in Sources */,
 				DAC2F64A26B3624200F0D485 /* PresentView.swift in Sources */,
 				DA19C9E326B0E64000DF67E4 /* Is_This_Your_Card_App.swift in Sources */,
+				DA03C34326B8DA0200D3BF4A /* HStackViewMod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

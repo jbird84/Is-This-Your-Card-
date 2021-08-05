@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DA03C34126B8D89900D3BF4A /* CardImageMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03C34026B8D89900D3BF4A /* CardImageMod.swift */; };
 		DA03C34326B8DA0200D3BF4A /* HStackViewMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03C34226B8DA0200D3BF4A /* HStackViewMod.swift */; };
+		DA03C34526BAB7F400D3BF4A /* PreviewButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03C34426BAB7F400D3BF4A /* PreviewButtonView.swift */; };
+		DA03C34726BABD2D00D3BF4A /* ButtonStyleMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA03C34626BABD2D00D3BF4A /* ButtonStyleMod.swift */; };
 		DA19C9E326B0E64000DF67E4 /* Is_This_Your_Card_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9E226B0E64000DF67E4 /* Is_This_Your_Card_App.swift */; };
 		DA19C9E526B0E64000DF67E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9E426B0E64000DF67E4 /* ContentView.swift */; };
 		DA19C9E726B0E64000DF67E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA19C9E626B0E64000DF67E4 /* Assets.xcassets */; };
@@ -16,12 +18,15 @@
 		DA19C9F226B0E70400DF67E4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9F126B0E70400DF67E4 /* Card.swift */; };
 		DA19C9F426B0E78600DF67E4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9F326B0E78600DF67E4 /* CardView.swift */; };
 		DA19C9F826B17BE700DF67E4 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9F726B17BE700DF67E4 /* Deck.swift */; };
+		DAAEA74426BABFF3008D36AD /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEA74326BABFF3008D36AD /* UIScreen.swift */; };
 		DAC2F64A26B3624200F0D485 /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2F64926B3624200F0D485 /* PresentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DA03C34026B8D89900D3BF4A /* CardImageMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageMod.swift; sourceTree = "<group>"; };
 		DA03C34226B8DA0200D3BF4A /* HStackViewMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStackViewMod.swift; sourceTree = "<group>"; };
+		DA03C34426BAB7F400D3BF4A /* PreviewButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewButtonView.swift; sourceTree = "<group>"; };
+		DA03C34626BABD2D00D3BF4A /* ButtonStyleMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleMod.swift; sourceTree = "<group>"; };
 		DA19C9DF26B0E64000DF67E4 /* Is This Your Card?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Is This Your Card?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA19C9E226B0E64000DF67E4 /* Is_This_Your_Card_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Is_This_Your_Card_App.swift; sourceTree = "<group>"; };
 		DA19C9E426B0E64000DF67E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,6 +36,7 @@
 		DA19C9F126B0E70400DF67E4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		DA19C9F326B0E78600DF67E4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DA19C9F726B17BE700DF67E4 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		DAAEA74326BABFF3008D36AD /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		DAC2F64926B3624200F0D485 /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +56,8 @@
 			children = (
 				DA03C34026B8D89900D3BF4A /* CardImageMod.swift */,
 				DA03C34226B8DA0200D3BF4A /* HStackViewMod.swift */,
+				DA03C34626BABD2D00D3BF4A /* ButtonStyleMod.swift */,
+				DAAEA74326BABFF3008D36AD /* UIScreen.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -83,6 +91,7 @@
 				DA19C9F326B0E78600DF67E4 /* CardView.swift */,
 				DA19C9F726B17BE700DF67E4 /* Deck.swift */,
 				DAC2F64926B3624200F0D485 /* PresentView.swift */,
+				DA03C34426BAB7F400D3BF4A /* PreviewButtonView.swift */,
 			);
 			path = "Is This Your Card?";
 			sourceTree = "<group>";
@@ -164,10 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA03C34726BABD2D00D3BF4A /* ButtonStyleMod.swift in Sources */,
+				DA03C34526BAB7F400D3BF4A /* PreviewButtonView.swift in Sources */,
 				DA19C9F826B17BE700DF67E4 /* Deck.swift in Sources */,
 				DA03C34126B8D89900D3BF4A /* CardImageMod.swift in Sources */,
 				DA19C9E526B0E64000DF67E4 /* ContentView.swift in Sources */,
 				DA19C9F226B0E70400DF67E4 /* Card.swift in Sources */,
+				DAAEA74426BABFF3008D36AD /* UIScreen.swift in Sources */,
 				DA19C9F426B0E78600DF67E4 /* CardView.swift in Sources */,
 				DAC2F64A26B3624200F0D485 /* PresentView.swift in Sources */,
 				DA19C9E326B0E64000DF67E4 /* Is_This_Your_Card_App.swift in Sources */,

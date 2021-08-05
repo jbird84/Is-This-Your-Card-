@@ -8,21 +8,24 @@
 import SwiftUI
 
 struct PresentView: View {
-    
     var contentView: ContentView
     @State var oneIsTapped = false
     @State var twoIsTapped = false
     @State var threeIsTapped = false
     @State var fourIsTapped = false
+    @State var navTitleText = "Select Two Piles"
+    @State var buttonText = "Continue"
     
     var body: some View {
         ZStack {
             let cardColor = contentView.theCard.color
-            Spacer()
+        
             Image("coolBG")
                 .ignoresSafeArea()
             VStack {
                 
+                Spacer()
+                    
                 //This is the top 4 cards
                 HStack {
                     Image(contentView.newDeck[0].card)
@@ -39,10 +42,15 @@ struct PresentView: View {
                     Image(contentView.newDeck[9].card)
                         .cardImageMod(isTapped: oneIsTapped, cardColor: cardColor)
                 }
-                .modifier(HStackViewMod(paddingBottom: -30, paddingLeading: 150, paddingTrailing: 0))
+                .modifier(HStackViewMod(paddingBottom: -60, paddingLeading: 150, paddingTrailing: 0))
                 .onTapGesture {
-                    oneIsTapped.toggle()
+                    withAnimation(.easeInOut(duration: 1)) {
+                        oneIsTapped.toggle()
+                                       }
+
+                  
                 }
+                .padding(.top, 30)
                 
                 
                 //This is the second to top 4 cards
@@ -61,9 +69,11 @@ struct PresentView: View {
                     Image(contentView.newDeck[5].card)
                         .cardImageMod(isTapped: twoIsTapped, cardColor: cardColor)
                 }
-                .modifier(HStackViewMod(paddingBottom: -30, paddingLeading: 0, paddingTrailing: 150))
+                .modifier(HStackViewMod(paddingBottom: -60, paddingLeading: 0, paddingTrailing: 150))
                 .onTapGesture {
-                    twoIsTapped.toggle()
+                    withAnimation(.easeInOut(duration: 1)) {
+                        twoIsTapped.toggle()
+                                       }
                 }
                 
                 
@@ -83,9 +93,11 @@ struct PresentView: View {
                     Image(contentView.newDeck[2].card)
                         .cardImageMod(isTapped: threeIsTapped, cardColor: cardColor)
                 }
-                .modifier(HStackViewMod(paddingBottom: -30, paddingLeading: 150, paddingTrailing: 0))
+                .modifier(HStackViewMod(paddingBottom: -60, paddingLeading: 150, paddingTrailing: 0))
                 .onTapGesture {
-                    threeIsTapped.toggle()
+                    withAnimation(.easeInOut(duration: 1)) {
+                        threeIsTapped.toggle()
+                                       }
                 }
             
                 
@@ -105,14 +117,26 @@ struct PresentView: View {
                     Image(contentView.newDeck[14].card)
                         .cardImageMod(isTapped: fourIsTapped, cardColor: cardColor)
                 }
-                .modifier(HStackViewMod(paddingBottom: 0, paddingLeading: 0, paddingTrailing: 150))
+                .modifier(HStackViewMod(paddingBottom: 10, paddingLeading: 0, paddingTrailing: 150))
                 .onTapGesture {
-                    fourIsTapped.toggle()
+                    withAnimation(.easeInOut(duration: 1)) {
+                        fourIsTapped.toggle()
+                                       }
                 }
+                
+                Spacer()
+//                PreviewButtonView(buttonText: $buttonText)
+//                    .padding(.bottom, 30)
+                
+                
+                
             }
-            .padding()
-            Spacer()
+            .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            
+    
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(navTitleText)
     }
 }
 

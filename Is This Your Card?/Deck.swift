@@ -13,7 +13,6 @@ struct Deck {
     var activeCard: Card? = nil 
     
     var cards = [
-        
         Card(card: "club1"),
         Card(card: "club2"),
         Card(card: "club3"),
@@ -67,6 +66,7 @@ struct Deck {
         Card(card: "spade12"),
         Card(card: "spade13")
     ]
+    
     
     var count: Int {
         return cards.count

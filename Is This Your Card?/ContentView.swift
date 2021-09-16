@@ -13,7 +13,7 @@ struct ContentView: View {
     @State var theCard: Card
     @State var newDeck: [Card]
     @State var isTapped = false
-    
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -61,6 +61,7 @@ struct ContentView: View {
                         .onTapGesture {
                             //removes top card/selected card and adds to new deck.
                             theCard = deck.cards.removeFirst()
+                            print(theCard)
                             //shuffle the deck of cards
                             deck.cards.shuffle()
                             

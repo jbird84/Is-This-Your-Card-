@@ -8,132 +8,41 @@
 import SwiftUI
 
 struct PresentView: View {
-    var contentView: ContentView
+    @State var contentView: ContentView
     @State var oneIsTapped = false
     @State var twoIsTapped = false
     @State var threeIsTapped = false
     @State var fourIsTapped = false
     @State var navTitleText = "Select Two Piles"
     @State var buttonText = "Continue"
+    @State var show = false
+    @Namespace var namespace
     
     var body: some View {
         ZStack {
-            let cardColor = contentView.theCard.color
-        
+            
+            
             Image("coolBG")
                 .ignoresSafeArea()
-            VStack {
                 
-                Spacer()
-                    
-                //This is the top 4 cards
-                HStack {
-                    Image(contentView.newDeck[0].card)
-                        .cardImageMod(isTapped: oneIsTapped, cardColor: cardColor)
-                    
-                    VStack {
-                        Image(contentView.newDeck[3].card)
-                            .cardImageMod(isTapped: oneIsTapped, cardColor: cardColor)
-                        
-                        Image(contentView.newDeck[6].card)
-                            .cardImageMod(isTapped: oneIsTapped, cardColor: cardColor)
-                        
-                    }
-                    Image(contentView.newDeck[9].card)
-                        .cardImageMod(isTapped: oneIsTapped, cardColor: cardColor)
-                }
-                .modifier(HStackViewMod(paddingBottom: -60, paddingLeading: 150, paddingTrailing: 0))
-                .onTapGesture {
-                    withAnimation(.easeInOut(duration: 1)) {
-                        oneIsTapped.toggle()
-                                       }
-
-                  
-                }
-                .padding(.top, 30)
-                
-                
-                //This is the second to top 4 cards
-                HStack {
-                    Image(contentView.newDeck[12].card)
-                        .cardImageMod(isTapped: twoIsTapped, cardColor: cardColor)
-                    
-                    VStack {
-                        Image(contentView.newDeck[15].card)
-                            .cardImageMod(isTapped: twoIsTapped, cardColor: cardColor)
-                        
-                        Image(contentView.newDeck[1].card)
-                            .cardImageMod(isTapped: twoIsTapped, cardColor: cardColor)
-                        
-                    }
-                    Image(contentView.newDeck[5].card)
-                        .cardImageMod(isTapped: twoIsTapped, cardColor: cardColor)
-                }
-                .modifier(HStackViewMod(paddingBottom: -60, paddingLeading: 0, paddingTrailing: 150))
-                .onTapGesture {
-                    withAnimation(.easeInOut(duration: 1)) {
-                        twoIsTapped.toggle()
-                                       }
-                }
-                
-                
-                //Third to top set of 4 cards
-                HStack {
-                    Image(contentView.newDeck[7].card)
-                        .cardImageMod(isTapped: threeIsTapped, cardColor: cardColor)
-                    
-                    VStack {
-                        Image(contentView.newDeck[11].card)
-                            .cardImageMod(isTapped: threeIsTapped, cardColor: cardColor)
-                        
-                        Image(contentView.newDeck[14].card)
-                            .cardImageMod(isTapped: threeIsTapped, cardColor: cardColor)
-                        
-                    }
-                    Image(contentView.newDeck[2].card)
-                        .cardImageMod(isTapped: threeIsTapped, cardColor: cardColor)
-                }
-                .modifier(HStackViewMod(paddingBottom: -60, paddingLeading: 150, paddingTrailing: 0))
-                .onTapGesture {
-                    withAnimation(.easeInOut(duration: 1)) {
-                        threeIsTapped.toggle()
-                                       }
-                }
             
+            VStack {
+            if !show {
                 
-                //Bottom set of 4 cards
-                HStack {
-                    Image(contentView.newDeck[4].card)
-                        .cardImageMod(isTapped: fourIsTapped, cardColor: cardColor)
-                    
-                    VStack {
-                        Image(contentView.newDeck[8].card)
-                            .cardImageMod(isTapped: fourIsTapped, cardColor: cardColor)
-                        
-                        Image(contentView.newDeck[10].card)
-                            .cardImageMod(isTapped: fourIsTapped, cardColor: cardColor)
-                        
-                    }
-                    Image(contentView.newDeck[14].card)
-                        .cardImageMod(isTapped: fourIsTapped, cardColor: cardColor)
-                }
-                .modifier(HStackViewMod(paddingBottom: 10, paddingLeading: 0, paddingTrailing: 150))
-                .onTapGesture {
-                    withAnimation(.easeInOut(duration: 1)) {
-                        fourIsTapped.toggle()
-                                       }
-                }
-                
-                Spacer()
-//                PreviewButtonView(buttonText: $buttonText)
-//                    .padding(.bottom, 30)
-                
+                FourPilesView(contentView: $contentView, oneIsTapped: $oneIsTapped, twoIsTapped: $twoIsTapped, threeIsTapped: $threeIsTapped, fourIsTapped: $fourIsTapped)
+             //  .matchedGeometryEffect(id: "4cards", in: namespace)
+               .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            } else {
+                TwoPilesView(contentView: $contentView, oneIsTapped: $oneIsTapped, twoIsTapped: $twoIsTapped, navTitleText: navTitleText)
+           //     .matchedGeometryEffect(id: "4cards", in: namespace)
+                .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            }
+            
+                PreviewButtonView(buttonText: $buttonText, isPressed: $show, oneIsTapped: $oneIsTapped, twoIsTapped: $twoIsTapped, threeIsTapped: $threeIsTapped, fourIsTapped: $fourIsTapped, navTitle: $navTitleText)
+                    .padding(.bottom, 200)
                 
                 
             }
-            .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            
-    
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(navTitleText)

@@ -18,6 +18,8 @@
 		DA19C9F226B0E70400DF67E4 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9F126B0E70400DF67E4 /* Card.swift */; };
 		DA19C9F426B0E78600DF67E4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9F326B0E78600DF67E4 /* CardView.swift */; };
 		DA19C9F826B17BE700DF67E4 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA19C9F726B17BE700DF67E4 /* Deck.swift */; };
+		DAA5FC6026F025AF00E39B61 /* TwoPilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5FC5F26F025AF00E39B61 /* TwoPilesView.swift */; };
+		DAA5FC6226F0CD8000E39B61 /* FourPilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5FC6126F0CD8000E39B61 /* FourPilesView.swift */; };
 		DAAEA74426BABFF3008D36AD /* UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAEA74326BABFF3008D36AD /* UIScreen.swift */; };
 		DAC2F64A26B3624200F0D485 /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC2F64926B3624200F0D485 /* PresentView.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		DA19C9F126B0E70400DF67E4 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		DA19C9F326B0E78600DF67E4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DA19C9F726B17BE700DF67E4 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		DAA5FC5F26F025AF00E39B61 /* TwoPilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPilesView.swift; sourceTree = "<group>"; };
+		DAA5FC6126F0CD8000E39B61 /* FourPilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPilesView.swift; sourceTree = "<group>"; };
 		DAAEA74326BABFF3008D36AD /* UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScreen.swift; sourceTree = "<group>"; };
 		DAC2F64926B3624200F0D485 /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +96,8 @@
 				DA19C9F726B17BE700DF67E4 /* Deck.swift */,
 				DAC2F64926B3624200F0D485 /* PresentView.swift */,
 				DA03C34426BAB7F400D3BF4A /* PreviewButtonView.swift */,
+				DAA5FC5F26F025AF00E39B61 /* TwoPilesView.swift */,
+				DAA5FC6126F0CD8000E39B61 /* FourPilesView.swift */,
 			);
 			path = "Is This Your Card?";
 			sourceTree = "<group>";
@@ -180,10 +186,12 @@
 				DA19C9E526B0E64000DF67E4 /* ContentView.swift in Sources */,
 				DA19C9F226B0E70400DF67E4 /* Card.swift in Sources */,
 				DAAEA74426BABFF3008D36AD /* UIScreen.swift in Sources */,
+				DAA5FC6026F025AF00E39B61 /* TwoPilesView.swift in Sources */,
 				DA19C9F426B0E78600DF67E4 /* CardView.swift in Sources */,
 				DAC2F64A26B3624200F0D485 /* PresentView.swift in Sources */,
 				DA19C9E326B0E64000DF67E4 /* Is_This_Your_Card_App.swift in Sources */,
 				DA03C34326B8DA0200D3BF4A /* HStackViewMod.swift in Sources */,
+				DAA5FC6226F0CD8000E39B61 /* FourPilesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
